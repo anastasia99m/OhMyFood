@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media (max-width: 767.98px) {
   * {
     font-family: 'Roboto', sans-serif;
@@ -37,9 +38,10 @@
   }
   .logo {
     display: flex;
-    padding: 14px 89px 13px 89px;
     justify-content: center;
     align-items: center;
+    gap: 40px;
+    margin: 15px;
   }
   .logo img {
     width: 197px;
@@ -94,7 +96,7 @@
     color: var(--Grey, #353535);
     margin: 0;
   }
-  .reservation .btn-explorer {
+  .btn-explorer {
     width: 218px;
     height: 50px;
     border-radius: 25px;
@@ -241,10 +243,8 @@
   }
   footer .footer-logo {
     display: flex;
-    width: 139px;
-    height: 27px;
     color: white;
-    margin-left: -20px;
+    font-family: Shrikhand;
   }
   footer .footer-elements {
     display: flex;
@@ -261,9 +261,6 @@
   /*Page Menu*/
   .arrow {
     display: flex;
-    align-items: center;
-    align-content: center;
-    padding-left: 10px;
   }
   .arrow a {
     text-decoration: none;
@@ -271,16 +268,22 @@
   }
   .header-image {
     display: flex;
-    width: 375px;
+    width: 100%;
     height: 275px;
   }
+  .header-image img {
+    width: 100%;
+  }
   .main-container {
-    fill: var(--Background, #F6F6F6);
+    background-color: #F6F6F6;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
-    border-top-right-radius: 30px;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    width: 100%;
+    margin-top: -60px;
+    padding-bottom: 40px;
   }
   .main-container .container-title {
     display: flex;
@@ -288,6 +291,8 @@
     align-items: center;
     gap: 20px;
     padding: 20px;
+    justify-content: space-between;
+    width: 85%;
   }
   .main-container .container-title .nom-resto {
     color: var(--Black, #101010);
@@ -295,23 +300,49 @@
     font-size: 28px;
     font-weight: 400;
   }
-  .entrees {
+  .menu-plats {
     display: flex;
     width: 100%;
     flex-direction: column;
+    gap: 12px;
+  }
+  .menu-plats .type-plat-txt {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 500;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+  }
+  .menu-plats .type-plat-txt::after {
+    content: "";
+    position: absolute;
+    background-color: #99E2D0;
+    height: 2px;
+    width: 40px;
+    display: flex;
+  }
+  .menu-plats .btn-tex† {
+    font-weight: 500;
   }
   .fonc-etapes {
     display: flex;
     gap: 15px;
     flex-direction: row;
     align-items: center;
-    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 93%;
   }
   .fonc-btn {
+    align-items: center;
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5px;
     height: 72.379px;
     width: 100%;
-    gap: 25px;
     padding-left: 30px;
     border-radius: 20px;
     background: white;
@@ -320,5 +351,22 @@
   .fonc-btn .btn-text {
     display: flex;
     align-items: center;
+    font-size: 17px;
+  }
+  .fonc-btn .description {
+    margin: 0;
+    font-size: 14px;
+  }
+  .fonc-btn .plat-info-prix {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .fonc-btn .plat-info-prix .prix {
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .fonc-btn .fonc-btn-menu {
+    width: 93%;
   }
 }

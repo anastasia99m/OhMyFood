@@ -1,3 +1,14 @@
+@keyframes progress-check{
+    0% {
+        opacity: 0;
+        width: 0;
+    }
+    100% {
+        opacity: 1;
+        width: 59px;
+    }
+}
+
 @media (max-width: 767.98px) {
     $font-stack: 'Roboto', sans-serif;
     $primary-color: white;
@@ -363,6 +374,7 @@ footer{
 .main-container{
     
     background-color:  #F6F6F6;
+    
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -380,6 +392,12 @@ footer{
         padding: 20px;
         justify-content: space-between;
         width: 85%;
+        .heart-empty{
+            margin-top: -10px;
+        }
+        .heart-full{
+            margin-top: -10px;
+        }
     
         .nom-resto{
             color: var(--Black, #101010);
@@ -421,14 +439,27 @@ footer{
 }
 .fonc-etapes{
     display: flex;
-    gap: 15px;
+    
     flex-direction: row;
     align-items: center;
     padding-left: 15px;
     padding-right: 15px;
     width: 93%;
+    position: relative;
+    
+    cursor: pointer;
+    &:active .check-mark-button{
+        transform: translateX(-62px);
+        transition: transform 750ms ease;
+    }
+    &:active .prix{
+        transform: translateX(-62px);
+        transition: transform 750ms ease;
+      }
+  
         a{
             width: 93%;
+            
         }
     }
 .fonc-btn{
@@ -443,6 +474,7 @@ footer{
     border-radius: 20px;
     background: white;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    
     .btn-text{
         display: flex;
         align-items: center;
@@ -464,6 +496,10 @@ footer{
         .prix{
             font-size: 13px;
             font-weight: 700;
+            position: absolute;
+            right: 40px;
+            transform: translateX(0);
+            transition: transform 750ms ease;
             
         }
        }
@@ -483,10 +519,13 @@ footer{
     background: #99E2D0;
     border-radius: 0px 15px 15px 0px;
     overflow: hidden;
-    visibility: hidden;
-    margin-right: -50px;
-    animation: reverse__check-mark-button__appear 0.8s;
+    
+    transform: translateX(0);
+    transition: transform 750ms ease;
     z-index: 0;
+
+    
+
     
 }
 .check-mark-button i {

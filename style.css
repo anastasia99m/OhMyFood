@@ -1,4 +1,15 @@
 @charset "UTF-8";
+@keyframes progress-check {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 59px;
+  }
+}
+
 @media (max-width: 767.98px) {
   * {
     font-family: 'Roboto', sans-serif;
@@ -323,6 +334,12 @@
     justify-content: space-between;
     width: 85%;
   }
+  .main-container .container-title .heart-empty {
+    margin-top: -10px;
+  }
+  .main-container .container-title .heart-full {
+    margin-top: -10px;
+  }
   .main-container .container-title .nom-resto {
     color: var(--Black, #101010);
     font-family: Shrikhand;
@@ -357,12 +374,21 @@
   }
   .fonc-etapes {
     display: flex;
-    gap: 15px;
     flex-direction: row;
     align-items: center;
     padding-left: 15px;
     padding-right: 15px;
     width: 93%;
+    position: relative;
+    cursor: pointer;
+  }
+  .fonc-etapes:active .check-mark-button {
+    transform: translateX(-62px);
+    transition: transform 750ms ease;
+  }
+  .fonc-etapes:active .prix {
+    transform: translateX(-62px);
+    transition: transform 750ms ease;
   }
   .fonc-etapes a {
     width: 93%;
@@ -401,6 +427,10 @@
   .fonc-btn .plat-info-prix .prix {
     font-size: 13px;
     font-weight: 700;
+    position: absolute;
+    right: 40px;
+    transform: translateX(0);
+    transition: transform 750ms ease;
   }
   .fonc-btn .fonc-btn-menu {
     width: 93%;
@@ -415,9 +445,8 @@
     background: #99E2D0;
     border-radius: 0px 15px 15px 0px;
     overflow: hidden;
-    visibility: hidden;
-    margin-right: -50px;
-    animation: reverse__check-mark-button__appear 0.8s;
+    transform: translateX(0);
+    transition: transform 750ms ease;
     z-index: 0;
   }
   .check-mark-button i {

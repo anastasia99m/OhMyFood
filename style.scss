@@ -8,6 +8,36 @@
         width: 59px;
     }
 }
+@keyframes descend-entrees{
+    0%{
+        transform: translateY(-100%);
+        opacity: 0; 
+    }
+    100%{
+        transform: translateY(0); 
+        opacity: 1;
+    }
+}
+@keyframes descend-plats{
+    0%{
+        transform: translateY(-100%);
+        opacity: 0; 
+    }
+    100%{
+        transform: translateY(0); 
+        opacity: 1;
+    }
+}
+@keyframes descend-desserts{
+    0%{
+        transform: translateY(-100%);
+        opacity: 0; 
+    }
+    100%{
+        transform: translateY(0); 
+        opacity: 1;
+    }
+}
 
 @media (max-width: 767.98px) {
     $font-stack: 'Roboto', sans-serif;
@@ -319,9 +349,6 @@ body {
     }
     
     
-
-    
-
 /*FOOTER*/
 footer{
     display: flex;
@@ -449,12 +476,14 @@ footer{
     
     cursor: pointer;
     &:active .check-mark-button{
-        transform: translateX(-62px);
+        transform: translateX(0);
         transition: transform 750ms ease;
+        transition: width 1s ease-in-out;
+        width:70px;
     }
     &:active .prix{
-        transform: translateX(-62px);
-        transition: transform 750ms ease;
+        transform: translateX(-60px);
+        transition: transform 5s ease;
       }
   
         a{
@@ -470,7 +499,6 @@ footer{
     gap: 5px;
     height: 72.379px;
     width: 100%;
-    padding-left: 30px;
     border-radius: 20px;
     background: white;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
@@ -498,28 +526,28 @@ footer{
             font-weight: 700;
             position: absolute;
             right: 40px;
-            transform: translateX(0);
-            transition: transform 750ms ease;
+           display: inline-flex;
+            transition: left 1s linear;
             
         }
        }
     .fonc-btn-menu{
-       width: 93%;
+       width: 100%;
+       padding-left: 15px;
     }
 }
 
 
 .check-mark-button {
+    width:0%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 59px;
     height: 73px;
     background: #99E2D0;
     border-radius: 0px 15px 15px 0px;
     overflow: hidden;
-    
     transform: translateX(0);
     transition: transform 750ms ease;
     z-index: 0;
@@ -548,8 +576,28 @@ a{
     text-decoration: none;
     color: #000;
 }
-
-
-
+.progress-entrees{
+    opacity: 0;
+    animation: descend-entrees 2s ease forwards;
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
+.progress-plats{
+    opacity: 0;
+    animation: descend-plats 2s ease forwards;
+    animation-delay: 2s;
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
+.progress-desserts{
+    opacity: 0;
+    animation: descend-desserts 2s ease forwards;
+    animation-delay: 4s;
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
 
 }

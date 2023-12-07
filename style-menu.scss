@@ -1,47 +1,7 @@
 @import '_style-commun.scss';
 @import '_style-animmation-progress';
-
-@keyframes progress-check{
-    0% {
-        opacity: 0;
-        width: 0;
-    }
-    100% {
-        opacity: 1;
-        width: 59px;
-    }
-}
-
-
-
-
-
-    $font-stack: 'Roboto', sans-serif;
-    $primary-color: white;
-
-    * {
-        font-family: 'Roboto', sans-serif;
-        a{
-            text-decoration: none;
-        }
-        h1{
-        font-size: 24px;
-        font-weight: 900;
-        margin: 0;
-        }
-        .icon{
-            display: flex;
-            align-items: center;
-            
-        }
-    }
-
-
-
-
-
-
-
+@import '_styleCheckBtn.scss';
+ 
 /*Page Menu*/
 .arrow{
    display: flex;
@@ -245,36 +205,6 @@
 }
 
 
-.check-mark-button {
-    width:0%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 73px;
-    background: #99E2D0;
-    border-radius: 0px 15px 15px 0px;
-    overflow: hidden;
-    transform: translateX(0);
-    transition: transform 750ms ease;
-    z-index: 0;
-
-    
-
-    
-}
-.check-mark-button i {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    color: #99E2D0;
-    
-    
-}
 
 .fonc-btn:active{
     margin-right: 1px;

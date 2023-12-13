@@ -44,35 +44,6 @@ body {
   width: 100%;
 }
 
-.logo {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 10%;
-  margin: 15px;
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .logo {
-    justify-content: flex-start;
-    gap: 0;
-  }
-}
-
-.logo img {
-  width: 197px;
-  height: 36px;
-  padding: 0px 19px 0px 100px;
-  display: flex;
-}
-
-@media (min-width: 768px) {
-  .logo img {
-    padding-left: 45%;
-  }
-}
-
 .btn-explorer {
   width: 218px;
   height: 50px;
@@ -523,6 +494,34 @@ footer i {
 }
 
 /*Page Menu*/
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 15px;
+  width: 100%;
+}
+
+.logo .logo-img {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    justify-content: flex-start;
+    gap: 0;
+  }
+}
+
+.logo img {
+  width: 197px;
+  height: 36px;
+  display: flex;
+}
+
 .arrow {
   display: flex;
   justify-content: flex-start;

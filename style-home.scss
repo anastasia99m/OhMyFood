@@ -36,7 +36,25 @@
     }
 
 
-
+    .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10%;
+        margin: 15px;
+        width: 100%;
+        @media (min-width: 768px){
+           
+            gap: 0;
+            
+        }
+            img{
+                width: 197px;
+                height: 36px;
+     
+            }
+            
+    }
 
 .location{
     display: flex;

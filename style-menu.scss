@@ -3,6 +3,34 @@
 @import '_styleCheckBtn.scss';
  
 /*Page Menu*/
+.logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 15px;
+    width: 100%;
+    .logo-img{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    @media (min-width: 768px){
+        justify-content: flex-start;
+        gap: 0;
+        
+    }
+        img{
+            width: 197px;
+            height: 36px;
+            display: flex;
+            @media (min-width: 768px){
+                
+            }
+            
+        }
+        
+}
 .arrow{
    display: flex;
    justify-content: flex-start;

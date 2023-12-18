@@ -13,8 +13,6 @@
     }
 }
 
-
-
     $font-stack: 'Roboto', sans-serif;
     $primary-color: white;
 
@@ -51,6 +49,7 @@
             img{
                 width: 197px;
                 height: 36px;
+                
      
             }
             
@@ -79,7 +78,7 @@
 
 .location-text{
     display: flex;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -106,16 +105,19 @@
         padding-bottom: 30px;
     }
     
-    h1{
+    h1, h2{
         width: 275px;
         height: 68px;
         text-align: center;
         @media (min-width: 768px){
             width: 100%;
+            font-size: 40px;
             height: auto;
+            font-weight: 700;
             
         }
     }
+   
     .description{
         width: 315px;
         height: 46px;

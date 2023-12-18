@@ -5,10 +5,11 @@
 /*Page Menu*/
 .logo{
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 15px;
-    width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        
+        margin: 15px;
+        width: 100%;
     .logo-img{
         display: flex;
         width: 100%;
@@ -17,13 +18,13 @@
     }
     @media (min-width: 768px){
         justify-content: flex-start;
-        gap: 0;
+        
         
     }
         img{
             width: 197px;
             height: 36px;
-            display: flex;
+     
             @media (min-width: 768px){
                 
             }
@@ -62,6 +63,7 @@
     }
     img{
         width: 100%;
+        object-fit: cover;
         @media (min-width: 768px){
             height: 375px;
             display: flex;
@@ -197,6 +199,7 @@
     border-radius: 20px;
     background: white;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    padding: 0;
     
     .btn-text{
         display: flex;
@@ -229,6 +232,9 @@
     .fonc-btn-menu{
        width: 100%;
        padding-left: 15px;
+       display: flex;
+       flex-direction: column;
+       gap: 5px;
     }
 }
 

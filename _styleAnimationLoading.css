@@ -42,11 +42,14 @@
   100% {
     opacity: 0;
     height: 0;
+    margin-top: 0;
   }
 }
 
 @media (min-width: 767.98px) {
   .loading {
+    display: flex;
+    align-items: center;
     justify-content: center;
     font-weight: 700;
     font-size: 80px;
@@ -55,7 +58,7 @@
     animation-delay: 6s;
     margin-left: auto;
     margin-right: auto;
-    transform: translateX(-50%) translateY(-50%);
+    margin-top: 220px;
   }
   main {
     opacity: 0;
@@ -79,10 +82,6 @@
     display: inline-block;
     opacity: 0;
     background-image: black;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 100%;
-    -webkit-text-stroke: 2px black;
   }
   .let1 {
     animation: drop 1.2s ease-in-out infinite;

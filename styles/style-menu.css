@@ -473,13 +473,40 @@ footer i {
   width: 70px;
 }
 
+@media (min-width: 768px) {
+  .fonc-etapes:active .check-mark-button {
+    transition: none;
+  }
+}
+
 .fonc-etapes:active .prix {
   transform: translateX(-60px);
   transition: transform 5s ease;
 }
 
+@media (min-width: 768px) {
+  .fonc-etapes:active .prix {
+    transition: none;
+  }
+}
+
 .fonc-etapes a {
   width: 93%;
+}
+
+@media (min-width: 768px) {
+  .fonc-etapes:hover .check-mark-button {
+    transform: translateX(0);
+    transition: transform 750ms ease;
+    transition: width 1s ease-in-out;
+    width: 70px;
+  }
+  .fonc-etapes:hover .prix {
+    transform: translateX(0);
+    transition: transform 750ms ease;
+    transition: width 1s ease-in-out;
+    width: 70px;
+  }
 }
 
 .check-mark-button {
@@ -680,33 +707,6 @@ footer i {
 
 .menu-plats .btn-tex† {
   font-weight: 500;
-}
-
-.fonc-etapes {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 93%;
-  position: relative;
-  cursor: pointer;
-}
-
-.fonc-etapes:active .check-mark-button {
-  transform: translateX(0);
-  transition: transform 750ms ease;
-  transition: width 1s ease-in-out;
-  width: 70px;
-}
-
-.fonc-etapes:active .prix {
-  transform: translateX(-60px);
-  transition: transform 5s ease;
-}
-
-.fonc-etapes a {
-  width: 93%;
 }
 
 .fonc-btn {

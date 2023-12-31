@@ -1,6 +1,6 @@
-@import '_styles/_style-commun.scss';
-@import '_styles/style-animmation-progress';
-@import '_styles/styleCheckBtn.scss';
+@import 'style-commun.scss';
+@import 'style-animmation-progress.scss';
+@import 'style-check-btn.scss';
  
 /*Page Menu*/
 .logo{
@@ -161,33 +161,7 @@
         font-weight: 500;
     }
 }
-.fonc-etapes{
-    display: flex;
-    
-    flex-direction: row;
-    align-items: center;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 93%;
-    position: relative;
-    
-    cursor: pointer;
-    &:active .check-mark-button{
-        transform: translateX(0);
-        transition: transform 750ms ease;
-        transition: width 1s ease-in-out;
-        width:70px;
-    }
-    &:active .prix{
-        transform: translateX(-60px);
-        transition: transform 5s ease;
-      }
-  
-        a{
-            width: 93%;
-            
-        }
-    }
+
 .fonc-btn{
     align-items: center;
     display: flex;

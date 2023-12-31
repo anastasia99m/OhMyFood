@@ -25,17 +25,39 @@
         transition: transform 750ms ease;
         transition: width 1s ease-in-out;
         width:70px;
+        @media (min-width: 768px){
+            transition: none; 
+        }
     }
     &:active .prix{
         transform: translateX(-60px);
         transition: transform 5s ease;
+        @media (min-width: 768px){
+            transition: none; 
+        }
       }
   
         a{
             width: 93%;
             
         }
+        
     }
+    //Pseudo-classe hover qui se declanche au niveau de survol seulement en format desktop
+    @media (min-width: 768px){
+            .fonc-etapes:hover .check-mark-button {
+                transform: translateX(0);
+                transition: transform 750ms ease;
+                transition: width 1s ease-in-out;
+                width:70px;  
+            }
+            .fonc-etapes:hover .prix {
+                transform: translateX(0);
+                transition: transform 750ms ease;
+                transition: width 1s ease-in-out;
+                width:70px;  
+            }
+        }
 
     .check-mark-button {
         width:0%;
